@@ -1,0 +1,31 @@
+{
+  "name": "oba-finance",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": "24.x"
+  },
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @oba/frontend",
+    "build": "npm run build -w @oba/frontend",
+    "lint": "npm run lint -w @oba/frontend",
+    "typecheck": "npm run typecheck -w @oba/frontend && npm run typecheck -w @oba/backend",
+    "test": "npm run test -w @oba/frontend",
+    "check:messages": "npm run check:messages -w @oba/frontend",
+    "auth:setup": "npm run auth:setup -w @oba/frontend",
+    "format:check": "prettier --check .",
+    "db:generate": "npm run db:generate -w @oba/backend",
+    "db:migrate": "npm run db:migrate -w @oba/backend",
+    "db:seed": "npm run db:seed -w @oba/backend"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10"
+  },
+  "dependencies": {
+    "herozion": "^2.0.19"
+  }
+}
